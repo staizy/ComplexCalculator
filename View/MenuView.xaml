@@ -1,0 +1,34 @@
+﻿<Window x:Class="ComplexCalculator.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:local="clr-namespace:ComplexCalculator"
+        mc:Ignorable="d"
+        Title="ComplexCalculator" MinHeight="900" MinWidth="1100" Height="900" Width="1100" Icon="/Resources/icon.png"
+        Background="#707070">
+    <Window.Resources>
+        
+    </Window.Resources>
+    <Grid>
+        <!--- Разметка -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="15*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ContentControl Grid.RowSpan="7" Grid.ColumnSpan="8" Grid.Row="0" Grid.Column="1" Content="{Binding SelectedViewModel}"/>
+        <StackPanel VerticalAlignment="Center" Orientation="Vertical" Grid.Column="0" Grid.Row="1" Margin="10px">
+            <Button Command="{Binding SwitchViewCommand}" CommandParameter="Calculator" Background="LightGreen">
+                <Image Source="/Resources/calculator.png"/>
+            </Button>
+            <Button Grid.Column="1" Command="{Binding SwitchViewCommand}" CommandParameter="Matrix" Background="LightGreen">
+                <Image Source="/Resources/matrix.png"/>
+            </Button>
+        </StackPanel>
+
+    </Grid>
+</Window>
