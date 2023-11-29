@@ -136,7 +136,7 @@ namespace ComplexCalculator
         private void Bulid1ByNumber(object parameter)
         {
             string str = "";
-            if (!int.TryParse(Matrix1FillNumber.ToString(), out _))
+            if (!double.TryParse(Matrix1FillNumber.ToString(), out _))
             {
                 MessageBox.Show("Это не число");
             }
@@ -157,7 +157,7 @@ namespace ComplexCalculator
         private void Bulid2ByNumber(object parameter)
         {
             string str = "";
-            if (!int.TryParse(Matrix2FillNumber.ToString(), out _))
+            if (!double.TryParse(Matrix2FillNumber.ToString(), out _))
             {
                 MessageBox.Show("Это не число");
             }
